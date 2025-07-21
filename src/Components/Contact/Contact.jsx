@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.css'
 import theme_pattern from "../../assets/theme_pattern.svg"
 import mail_icon from '../../assets/mail_icon.svg'
@@ -6,6 +6,7 @@ import location_icon from "../../assets/location_icon.svg"
 import call_icon from "../../assets/call_icon.svg"
 
 function Contact() {
+   const formRef = useRef(null);
 
    const onSubmit = async (event) => {
     event.preventDefault();
@@ -27,6 +28,7 @@ function Contact() {
 
     if (res.success) {
       alert(res.message);
+      formRef.current.reset()
     }
   };
 
@@ -58,7 +60,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form onSubmit={onSubmit} action="" className='contact-right'>
+            <form ref = {formRef} onSubmit={onSubmit} action="" className='contact-right'>
                 <label htmlFor=""> Your Name </label>
                 <input type="text" placeholder='Enter your name' name='name'/>
                 <label htmlFor="">Your Email</label>
