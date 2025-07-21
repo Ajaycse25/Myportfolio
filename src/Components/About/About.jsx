@@ -19,7 +19,7 @@ const About = () => {
                 <div className="about-right">
                     <div className="about-para">
                         <p>
-                            Hello! I'm Ajay, a B.Tech graduate from MAIT, specializing in full-stack development.
+                            Hello! I'm Ajay Baghel, a B.Tech graduate from MAIT, specializing in full-stack development.
                             I have a passion for creating dynamic and responsive web applications.
                             With a strong foundation in both front-end and back-end technologies, I strive to deliver seamless user experiences.
                         </p>
